@@ -38,7 +38,7 @@ private ContactAdapter adapter;
     private void LoadData() {
         contacts=new ArrayList<>();
         for (int i = 0; i <10; i++) {
-            contacts.add("Name "+i);
+            contacts.add("Contact "+i);
 
         }
     }

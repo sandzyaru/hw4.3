@@ -16,25 +16,20 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
     public ContactAdapter(ArrayList<String> data) {
         this.data = data;
     }
-
     @NonNull
     @Override
     public ContactViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ContactViewHolder(LayoutInflater.from(parent.getContext()).
                 inflate(R.layout.item_contact, parent, false));
     }
-
     @Override
     public void onBindViewHolder(@NonNull ContactViewHolder holder, int position) {
         holder.bind(data.get(position));
-
     }
-
     @Override
     public int getItemCount() {
-        return 0;
+        return data.size();
     }
-
     class ContactViewHolder extends RecyclerView.ViewHolder{
         private TextView contact;
         public ContactViewHolder(@NonNull View itemView) {
@@ -44,7 +39,6 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
 
         public void bind(String name) {
             contact.setText(name);
-
         }
     }
 }
